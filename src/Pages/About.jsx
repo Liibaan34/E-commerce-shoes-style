@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-
+// This is the About component
 
 const About = () => {
     return (
