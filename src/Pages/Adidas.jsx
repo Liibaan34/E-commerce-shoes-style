@@ -1,3 +1,4 @@
+// Import necessary dependencies from React and other libraries
 import { useState, useEffect,} from 'react';
 import { motion } from 'framer-motion';
 import { FaTimes, FaStar } from 'react-icons/fa';
@@ -5,7 +6,7 @@ import { Dialog, DialogBackdrop, DialogPanel, Radio, RadioGroup } from '@headles
 import { adidasProducts } from '../../Backend/data'; // Assuming this is correctly imported
 import { useCart } from './CartContext'; // Import CartContext
 
-
+// Define the Adidas component
 const Adidas = () => {
   const [products, setProducts] = useState([]);
   const [open, setOpen] = useState(false);
@@ -13,7 +14,7 @@ const Adidas = () => {
   const [selectedColor, setSelectedColor] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const { addToCart } = useCart();
-
+  
   useEffect(() => {
     setProducts(adidasProducts);
   }, []);
@@ -27,11 +28,11 @@ const Adidas = () => {
       setOpen(true);
     }
   };
-
+ // Utility function to conditionally apply CSS classes
   function classNames(...classes) {
     return classes.filter(Boolean).join(' ');
   }
-
+  // Return the JSX for the Adidas component
   return (
     <div className="mb-24">
       <div className="flex justify-center">
